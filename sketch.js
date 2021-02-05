@@ -5,7 +5,7 @@ const Body=Matter.Body;
 
 
 var engine,world;
-var fairyIMG,fairySprite,fairyVoice;
+var fairyIMG,fairySprite;
 var starIMG,starSprite,starBody;
 var starnightIMG;
 
@@ -16,13 +16,12 @@ function preload(){
    starnightIMG=loadImage("images/starnight.png")
    fairyIMG=loadAnimation("images/fairy1.png","images/fairy2.png")
    starIMG=loadImage("images/star.png")
-   fairyVoice=loadSound("sound/JoyMusic.mp3")
 }
 function setup() {
 	createCanvas(800, 750);
   engine=Engine.create();
   world=engine.world;
-  fairyVoice.play();
+ 
   fairySprite=createSprite(130,520,10,10)
   fairySprite.addAnimation("fairyFlying",fairyIMG);
   fairySprite.scale=0.25
